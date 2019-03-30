@@ -1,0 +1,69 @@
+#!/bin/bash
+#Project Utools2
+#Project From Joy JoyGhosh
+#Joychondroghosh@gmail.com
+cyan='\e[0;36m'
+lightcyan='\e[96m'
+green='\e[0;32m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+function main_menu()
+{
+    while :
+    do
+echo -ne "\033]0;Bruteforce Tools(Utools)\007"
+resize -s 24 109
+clear
+echo -e """${yellow}
+           _________________________________________________________________________
+            ██╗   ██╗████████╗ ██████╗  ██████╗ ██╗     ███████╗██████╗     ██████╗
+            ██║   ██║╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝╚════██╗   ██╔═████╗
+            ██║   ██║   ██║   ██║   ██║██║   ██║██║     ███████╗ █████╔╝   ██║██╔██║
+            ██║   ██║   ██║   ██║   ██║██║   ██║██║     ╚════██║██╔═══╝    ████╔╝██║
+            ╚██████╔╝   ██║   ╚██████╔╝╚██████╔╝███████╗███████║███████╗██╗╚██████╔╝
+             ╚═════╝    ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝ ╚═════╝
+             ______________________________________________________________________
+                                        BY JOY GHOSH
+             ----------------------------------------------------------------------
+"""
+echo -e """${blue}
+            =======================================================================
+            |                          Bruteforce Tools                          |
+            =======================================================================
+                                   1.FbBruteforcer(JoyGhosh)
+                                   2.InstaBrute(xHak9X)
+                                   3.Gemail-Hack(Ha3MrX)
+                                   m.main menu
+           ========================================================================
+"""
+read -p "root@Utools:~ " option
+case "$option" in
+               1)clear
+                chmod +x *
+                ./fbbrute
+                read -p "press any key to return ..."
+                ;;
+                2)clear
+                chmod +x  instabr
+                ./instabr
+                read -p "press any key to return ..."
+                ;;
+                3)clear
+                cd Gemail-Hack
+                chmod +x gemailhack.py
+                ./gemailhack.py
+                cd ..
+                read -p "press any key to return ..."
+                ;;
+                m)clear
+                cd ..
+                ./utools
+                 cd
+                ;;
+          esac
+    done
+}
+main_menu
