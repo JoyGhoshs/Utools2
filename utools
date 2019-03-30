@@ -1,0 +1,172 @@
+#!/bin/bash
+#Project Utools2
+#Project From Joy JoyGhosh
+#Joychondroghosh@gmail.com
+cyan='\e[0;36m'
+lightcyan='\e[96m'
+green='\e[0;32m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+function main_menu()
+{
+    while :
+    do
+echo -ne "\033]0;Utools(By JoyGhosh)\007"
+resize -s 24 109
+clear
+echo -e """${yellow}
+           _________________________________________________________________________
+
+            ██╗   ██╗████████╗ ██████╗  ██████╗ ██╗     ███████╗██████╗     ██████╗
+            ██║   ██║╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝╚════██╗   ██╔═████╗
+            ██║   ██║   ██║   ██║   ██║██║   ██║██║     ███████╗ █████╔╝   ██║██╔██║
+            ██║   ██║   ██║   ██║   ██║██║   ██║██║     ╚════██║██╔═══╝    ████╔╝██║
+            ╚██████╔╝   ██║   ╚██████╔╝╚██████╔╝███████╗███████║███████╗██╗╚██████╔╝
+             ╚═════╝    ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝ ╚═════╝
+             ______________________________________________________________________
+                                        BY JOY GHOSH
+             ----------------------------------------------------------------------
+"""
+echo -e """${lightgreen}
+            ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                         exit.Exit The Tool
+                            d.download all tools and their Requierment
+            ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+              1.Wireless Tools                      6.Metasploit Payload Generator
+              2.Webapp Pentest Tools                7.Php Webshell Downloader
+              3.Bruteforce Tools                    8.ddos Tools
+              4.Information Gathering Tools
+              5.Wordlist Generator
+              ====================================================================
+"""
+read -p "root@Utools:~ " option
+case "$option" in
+           exit)exit
+           ;;
+
+           d)clear
+            cd modules
+             git clone https://github.com/JoyGhoshs/Packets
+             git clone https://github.com/JoyGhoshs/Airattackit
+             git clone https://github.com/v1s1t0r1sh3r3/airgeddon
+             git clone https://github.com/FluxionNetwork/fluxion
+             git clone https://github.com/derv82/wifite
+             git clone https://github.com/Ha3MrX/DDos-Attack
+             git clone https://github.com/epsylon/ufonet
+             git clone https://github.com/xHak9x/fbi
+             git clone https://github.com/thelinuxchoice/userrecon
+             git clone https://github.com/KURO-CODE/PyCrunch
+             git clone https://github.com/Moham3dRiahi/Th3inspector
+             git clone https://github.com/sundowndev/PhoneInfoga
+             git clone https://github.com/thelinuxchoice/infog
+             git clone https://github.com/JoyGhoshs/FbBruteforcer
+             git clone https://github.com/xHak9x/instabrute
+             git clone https://github.com/Ha3MrX/Gemail-Hack
+             git clone https://github.com/agusmakmun/python-wordlist-generator
+             git clone https://github.com/R3nt0n/bopscrk
+             git clone https://github.com/skavngr/rapidscan
+             git clone https://github.com/Shadowz3n/WPExploit
+             git clone https://github.com/Moham3dRiahi/XAttacker
+             git clone https://github.com/s0md3v/Striker
+             git clone https://github.com/s0md3v/XSStrike
+             git clone https://github.com/Anon-Exploiter/SiteBroker
+             git clone https://github.com/Tuhinshubhra/RED_HAWK
+             git clone https://github.com/cyweb/hammer
+             cd PhoneInfoga
+             pip3 install -r   requirements.txt
+             pip install -r   requirements.txt
+             cd ..
+             cd bopscrk
+             pip install -r requirements.txt
+             pip3 install -r requirements.txt
+             cd ..
+             cd Striker
+             pip install -r requirements.txt
+             cd ..
+             cd XSStrike
+             pip install -r requirements.txt
+             cd ..
+             cd SiteBroker
+             pip install -r requirements.txt
+             cd ..
+             cd Th3inspector
+             chmod +x *
+             ./install.sh
+             echo '''Downloading and installing requierment done if you face any problem please report issue on github
+              or just install requierment manualy.(Thank You)
+             '''
+             read -p "press any key to return ..."
+             cd ..
+           ;;
+           1)clear
+            cd modules
+            chmod +x Wireless
+            ./wireless
+            read -p "press any key to return ..."
+            cd ..
+            ;;
+            2)clear
+             cd modules
+             chmod +x webpen
+             ./webpen
+             read -p "press any key to return ..."
+             cd ..
+            ;;
+            3)clear
+            cd modules
+            chmod +x brutef
+            ./brutef
+            read -p "press any key to return ..."
+            cd ..
+            ;;
+            4)clear
+            cd modules
+            chmod +x info
+            ./info
+            read -p "press any key to return ..."
+            cd ..
+            ;;
+            5)clear
+             cd modules
+             chmod +x wordlist
+             ./wordlist
+             read -p "press any key to return ..."
+             cd ..
+             ;;
+             6)clear
+             cd modules
+             chmod +x metasp
+             ./metasp
+             read -p "press any key to return ..."
+             cd ..
+             ;;
+             7)clear
+             cd modules
+             chmod +x webshell
+             ./webshell
+             read -p "Press any key to return"
+             cd ..
+             ;;
+             8)clear
+             cd modules
+             chmod +x ddos
+             ./ddos
+             read -p "Press any key to return"
+             cd ..
+             ;;
+
+
+
+
+
+
+
+
+
+          esac
+    done
+}
+main_menu
